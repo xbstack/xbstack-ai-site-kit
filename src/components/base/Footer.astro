@@ -1,0 +1,17 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-20 border-t border-slate-200 dark:border-white/5 py-12">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+    <div class="text-slate-500 text-sm">
+      &copy; {year} XBSTACK AI Site Kit. Built with Astro.
+    </div>
+    
+    <div class="flex gap-6 text-sm font-medium">
+      <a href="/rss.xml" class="hover:text-blue-500 transition-colors">RSS</a>
+      <a href="/privacy" class="hover:text-blue-500 transition-colors">Privacy</a>
+      <a href="https://github.com/xbstack/xbstack-ai-site-kit" class="hover:text-blue-500 transition-colors">GitHub</a>
+    </div>
+  </div>
+</footer>

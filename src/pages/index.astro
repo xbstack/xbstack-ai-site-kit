@@ -1,0 +1,38 @@
+---
+import BaseLayout from "@components/base/BaseLayout.astro";
+import { getCollection } from 'astro:content';
+
+const title = "XBSTACK AI Site Kit | Starter Template";
+const description = "Open-source Astro starter kit for AI engineers and indie developers.";
+
+const articles = await getCollection('articles');
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="max-w-4xl mx-auto px-6 py-20">
+    <section class="space-y-8">
+      <h1 class="text-6xl font-black tracking-tighter uppercase italic">
+        AI-Native <span class="text-blue-500">Starter</span> Kit
+      </h1>
+      <p class="text-xl text-slate-600 dark:text-slate-400 border-l-4 border-blue-500 pl-6">
+        This is an open-source template for building technical content platforms.
+      </p>
+    </section>
+
+    <section class="mt-20">
+      <h2 class="text-2xl font-bold mb-8">Latest Articles</h2>
+      <div class="grid gap-8">
+        {articles.map(article => (
+          <article class="p-6 border border-slate-200 dark:border-white/10 rounded-xl">
+            <h3 class="text-xl font-bold mb-2">
+              <a href={`/articles/${article.slug}`} class="hover:text-blue-500 transition-colors">
+                {article.data.title}
+              </a>
+            </h3>
+            <p class="text-slate-500">{article.data.description}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,219 @@
+html {
+  @apply text-sm md:text-base h-screen;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply font-secondary font-normal leading-relaxed text-slate-900 dark:text-slate-300;
+  @apply bg-bg-p dark:bg-slate-950;
+  
+  /* 专家级：浅色模式高对比度补强 */
+  &:not(.dark) {
+    color: #020617; // Slate-950
+  }
+  @apply flex flex-col min-h-screen lg:mx-8;
+  @apply leading-7 md:leading-8;
+  font-family: "寒蝉半圆体", sans-serif;
+  font-weight: 400;
+  
+  /* 专家级：深色模式背景质感增强 */
+  &::before {
+    content: "";
+    @apply fixed inset-0 z-[-1] opacity-0 dark:opacity-100 pointer-events-none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    filter: contrast(150%) brightness(100%);
+  }
+}
+
+/* 品牌专属选区颜色 - 深色模式增强 */
+::selection {
+  background-color: rgba(249, 115, 22, 0.3);
+  color: #fb923c;
+}
+
+.dark ::selection {
+  background-color: rgba(249, 115, 22, 0.4);
+  color: #fff;
+}
+
+/* 自定义品牌滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 0.4);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 0.3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-primary font-bold leading-tight text-txt-p dark:text-darkmode-txt-p intersect:animate-fade opacity-0 tracking-tight;
+}
+
+h1,
+.h1 {
+  @apply text-h1-sm md:text-h1;
+}
+
+h2,
+.h2 {
+  @apply text-h2-sm md:text-h2;
+}
+
+h3,
+.h3 {
+  @apply text-h3-sm md:text-h3;
+}
+
+h4,
+.h4 {
+  @apply text-h4 font-medium;
+}
+
+h5,
+.h5 {
+  @apply text-h5 font-medium;
+}
+
+h6,
+.h6 {
+  @apply text-h6 font-medium;
+}
+
+p {
+  @apply intersect:animate-fade opacity-0;
+}
+
+b,
+strong {
+  @apply font-extrabold;
+  @apply text-txt-p dark:text-darkmode-txt-p;
+}
+
+img {
+  @apply mx-auto;
+}
+
+// 分隔线样式
+hr {
+  @apply my-8 border-gray-900/50;
+
+  .dark & {
+    @apply border-gray-300/50;
+  }
+}
+
+a {
+  @apply font-bold transition-all duration-300;
+}
+
+a.under {
+  @apply text-orange-600 dark:text-orange-400;
+  &::after {
+    @apply content-[''] absolute left-0 bottom-0;
+    @apply w-0 h-[1.5px];
+    @apply bg-current;
+    transition: all 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  &:hover::after {
+    @apply w-full;
+  }
+}
+
+.main-content {
+  @apply mt-4;
+}
+
+// Container
+.container {
+  @apply mx-auto max-w-[1300px] px-4;
+}
+
+.container-l {
+  @apply mx-auto max-w-[1300px] px-2;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.katex {
+  .base {
+    @apply text-txt-s dark:text-darkmode-txt-s;
+  }
+}
+
+html.dark .astro-code,
+html.dark .astro-code span {
+  // color: var(--shiki-dark) !important;
+  // background-color: var(--shiki-dark-bg) !important;
+}
+
+// code {
+//   @apply after:border-none;
+// }
+.left_centor {
+  position: absolute;
+  left: calc(50% - 37px);
+  transform: translateX(-50%);
+}
+
+.prose
+  :where(ul > li):not(
+    :where([class~="not-prose"], [class~="not-prose"] *)
+  )::marker {
+  @apply text-cyan-700 dark:text-amber-300 !important;
+}
+
+/* 通用SVG图标样式约束 */
+// .prose svg {
+//   width: 16px;
+//   height: 16px;
+//   display: inline-block;
+//   flex-shrink: 0;
+//   stroke-width: 2;
+// }
+
+// /* 确保所有SVG图标都有合适的尺寸 */
+// svg:not(.hero-icon):not(.logo) {
+//   max-width: 24px;
+//   max-height: 24px;
+//   width: auto;
+//   height: auto;
+//   display: inline-block;
+// }

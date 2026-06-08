@@ -1,0 +1,26 @@
+@use "sass:meta";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 极简基础样式，确保不报错 */
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+@layer base {
+  @include meta.load-css("base");
+}
+
+@layer components {
+  @include meta.load-css("prose");
+  @include meta.load-css("markdown");
+  @include meta.load-css("glass");
+  @include meta.load-css("glass-new");
+}
+
+@layer utilities {
+  @include meta.load-css("utilities");
+  @include meta.load-css("twikoo-custom");
+}

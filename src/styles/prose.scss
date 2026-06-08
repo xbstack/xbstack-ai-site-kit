@@ -1,0 +1,48 @@
+// Markdown Content
+.content {
+  // Base
+  @apply prose max-w-none intersect:animate-fadeUp;
+  @apply prose-headings:mb-[.3em] prose-headings:mt-[.6em] prose-headings:text-slate-900 prose-headings:dark:text-white;
+  @apply prose-h1:text-h1-sm md:prose-h1:text-h1;
+  @apply prose-h2:text-h2-sm md:prose-h2:text-h2;
+  @apply prose-h3:text-h3-sm md:prose-h3:text-h3;
+  
+  /* 正文颜色优化：浅色模式下使用极深灰 (Slate-950)，确保绝对对比度 */
+  @apply prose-p:text-lg prose-p:text-slate-950 prose-p:dark:text-slate-300;
+  
+  @apply prose-a:text-sky-600 prose-a:underline hover:prose-a:text-sky-800 prose-a:dark:text-sky-400 hover:prose-a:dark:text-sky-300;
+  @apply prose-img:max-w-full prose-img:rounded;
+  @apply prose-hr:border-border prose-hr:dark:border-darkmode-border prose-hr:my-8;
+  
+  /* 强调文字 */
+  @apply prose-strong:text-slate-900 prose-strong:dark:text-white prose-strong:font-black;
+  
+  @apply prose-pre:rounded-lg prose-pre:bg-bg-t prose-pre:dark:bg-darkmode-bg-t;
+  // Code
+  @apply prose-code:px-1 prose-code:text-orange-600 prose-code:dark:text-orange-400 prose-code:bg-orange-100/50 prose-code:dark:bg-orange-500/10 prose-code:rounded;
+  // Blockquote
+  @apply prose-blockquote:rounded-lg prose-blockquote:border prose-blockquote:border-l-8 prose-blockquote:px-4 prose-blockquote:py-0 prose-blockquote:font-secondary prose-blockquote:text-xl prose-blockquote:not-italic;
+  @apply prose-blockquote:bg-slate-50 prose-blockquote:dark:bg-white/5 prose-blockquote:border-slate-300 prose-blockquote:dark:border-slate-700 prose-blockquote:text-slate-700 prose-blockquote:dark:text-slate-400;
+  @apply prose-blockquote:prose-p:m-0;
+  // Table: 移动端优化
+  @apply prose-table:block prose-table:overflow-x-auto prose-table:w-full;
+  @apply prose-table:relative prose-table:overflow-hidden prose-table:rounded-lg;
+  
+  // 确保表头和单元格不换行，除非在桌面端
+  @apply prose-th:whitespace-nowrap md:prose-th:whitespace-normal;
+  @apply prose-td:whitespace-nowrap md:prose-td:whitespace-normal;
+
+  @apply prose-thead:border-border prose-thead:dark:border-darkmode-border prose-thead:dark:bg-darkmode-bg-t prose-thead:bg-bg-t prose-thead:bg-opacity-40 prose-thead:dark:bg-opacity-40 backdrop-blur-lg;
+  @apply prose-th:relative prose-th:z-10 prose-th:px-4 prose-th:py-3 prose-th:text-slate-900 prose-th:dark:text-white prose-th:font-black;
+  @apply prose-tr:border-b prose-tr:border-slate-200 prose-tr:dark:border-white/10;
+  @apply prose-td:relative prose-td:z-10 prose-td:px-4 prose-td:py-3 prose-td:text-slate-700 prose-td:dark:text-slate-300;
+  // Lists
+  @apply prose-li:text-slate-800 prose-li:dark:text-slate-300;
+  @apply prose-li:marker:text-sky-600 prose-li:marker:dark:text-sky-400 prose-li:marker:inset-2;
+
+  li {
+    p {
+      @apply m-0; // in .mdx files, li elements can contain <p> tags
+    }
+  }
+}
