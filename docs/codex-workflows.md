@@ -40,11 +40,16 @@ Codex can help detect:
 - Insecure deployment examples
 - Dependency risks
 
-## 5. Content Automation
+## Example Codex Prompts
 
-Codex can help maintain:
+### PR Review
+> Review this PR for Astro build errors, invalid frontmatter, SEO metadata regressions, and accessibility issues. Provide specific actionable feedback.
 
-- Broken link reports
-- Metadata audits
-- Sitemap checks
-- Frontmatter validation
+### Release Notes
+> Generate release notes from merged PRs since the last tag. Categorize by Features, Bug Fixes, and Documentation.
+
+### SEO Audit Fix
+> Fix missing title, description, canonical, and ogImage fields in these content files, ensuring description is under 160 characters.
+
+### Issue Triage
+> Analyze this issue description and suggest appropriate labels (bug, enhancement, documentation). If it's a bug, try to identify the root cause based on the current src/ layouts.
