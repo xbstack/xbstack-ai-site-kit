@@ -1,6 +1,23 @@
 # XBSTACK AI Site Kit
 
+## Project Status
+
+XBSTACK AI Site Kit is an early-stage open-source starter kit. The current version focuses on the foundation: Astro structure, content schema, SEO conventions, deployment workflow, and maintainer automation. More templates and automation scripts are planned.
+
 An open-source Astro starter kit for AI engineers, indie developers, and technical creators.
+
+## Architecture
+
+```text
+src/
+  components/
+  layouts/
+  pages/
+  content/
+scripts/
+docs/
+.github/
+```
 
 ## Why this project exists
 

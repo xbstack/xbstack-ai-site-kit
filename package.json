@@ -18,8 +18,8 @@
     "preview": "astro preview",
     "format": "prettier -w ./src",
     "check": "astro check",
-    "audit:seo": "tsx scripts/audit-seo.ts",
-    "check:links": "tsx scripts/check-links.ts"
+    "audit:seo": "python3 scripts/audit-seo.py",
+    "check:links": "python3 scripts/check-links.py"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",

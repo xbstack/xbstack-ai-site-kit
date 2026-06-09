@@ -20,5 +20,15 @@ I will use API credits for core OSS maintainer workflows:
 5. **Security Checks**: Detecting accidentally committed secrets or insecure deployment patterns.
 6. **Documentation**: Helping generate and update technical documentation based on code changes.
 
+### Example Codex Prompts
+**PR Review**
+> Review this PR for Astro build errors, invalid frontmatter, SEO metadata regressions, and accessibility issues. Provide specific actionable feedback.
+
+**Release Notes**
+> Generate release notes from merged PRs since the last tag. Categorize by Features, Bug Fixes, and Documentation.
+
+**SEO Audit Fix**
+> Fix missing title, description, canonical, and ogImage fields in these content files, ensuring description is under 160 characters.
+
 ## Anything else we should know?
 The project is connected to the live engineering site xbstack.com, serving as a real-world testing ground for the templates and scripts provided in the kit. We are committed to an "AI-assisted maintenance" philosophy, using Codex to keep the codebase clean, secure, and performant with minimal manual overhead.
