@@ -5,7 +5,7 @@
 - [x] Public Astro starter template
 - [x] Configurable site metadata
 - [x] Example content collections
-- [x] Cloudflare Pages deployment guide
+- [ ] Cloudflare Pages deployment guide
 - [x] MIT license
 - [x] Contribution guide
 
