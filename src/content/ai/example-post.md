@@ -111,11 +111,9 @@ A: 它们是互补关系。Function Calling 是云端简单的 API 调用，而 
 
 ## 推荐深度阅读 (Internal Mesh)
 
-- 👉 [AI Agent Architecture：智能体架构深度解析](/ai/ai-agent-architecture/)
-- 👉 [LangGraph 实战：构建不跑偏 AI Agent 工作流的 3 个设计模式](/ai/ai-agent-workflow/)
-- 👉 [MCP 协议深度指南：AI Agent 与本地工具连接的标准协议](/ai/mcp-protocol-指南/)
-- 👉 [AI 合同审查智能体实战：自动化法律风险检测](/ai/how-to-build-ai-contract-review-agent/)
-
+- 👉 [Astro Documentation](https://docs.astro.build)
+- 👉 [XBSTACK AI Site Kit Usage Guide](../../../docs/USAGE.md)
+- 👉 [XBSTACK AI Site Kit 中文使用教程](../../../docs/USAGE.zh.md)
 
 2. 对于这种物理级隔离方案，你的看法是什么？
 

@@ -55,6 +55,11 @@ npm install
 npm run dev
 ```
 
+## Documentation
+
+- 📖 **[English Usage Guide](./docs/USAGE.md)**
+- 📖 **[中文使用教程](./docs/USAGE.zh.md)**
+
 ## Deployment
 
 ```bash
