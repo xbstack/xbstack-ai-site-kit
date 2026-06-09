@@ -34,7 +34,7 @@ XBSTACK AI Site Kit provides a reusable Astro-based foundation for building deve
 - **RSS and sitemap** support
 - **Cloudflare Pages** deployment
 - **Content frontmatter** validation
-- **Broken link** checking
+- **Basic internal link** validation
 - **AI-assisted** maintainer workflows
 
 ## Use cases
